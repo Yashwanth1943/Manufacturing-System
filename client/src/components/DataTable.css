@@ -1,0 +1,136 @@
+.data-table-shell {
+  display: grid;
+  gap: 12px;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.table-controls input,
+.table-controls select {
+  min-height: 40px;
+  border: 1px solid #dbe4ea;
+  border-radius: 8px;
+  background: #f8fafb;
+  color: #17232f;
+  padding: 0 12px;
+  outline: none;
+}
+
+.table-controls input {
+  width: min(360px, 100%);
+}
+
+.table-controls input:focus,
+.table-controls select:focus {
+  border-color: #176b5b;
+  box-shadow: 0 0 0 4px rgba(23, 107, 91, 0.1);
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #dde6ec;
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.data-table th {
+  padding: 14px 16px;
+  background: #f2f6f8;
+  color: #5a6b79;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  padding: 15px 16px;
+  border-top: 1px solid #edf2f5;
+  color: #273946;
+  font-size: 14px;
+}
+
+.data-table tr:hover td {
+  background: #fbfcfd;
+}
+
+.row-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.row-actions button,
+.pagination-controls button {
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 7px;
+  background: #e7edf1;
+  color: #1f3345;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.row-actions button.primary {
+  background: #176b5b;
+  color: #ffffff;
+}
+
+.row-actions button.danger {
+  background: #b64031;
+  color: #ffffff;
+}
+
+.row-actions button:disabled,
+.pagination-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.table-empty {
+  padding: 28px;
+  background: #ffffff;
+  color: #687887;
+  text-align: center;
+  font-weight: 800;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #687887;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pagination-controls div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-controls strong {
+  color: #17232f;
+}
+
+@media (max-width: 640px) {
+  .table-controls,
+  .pagination-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

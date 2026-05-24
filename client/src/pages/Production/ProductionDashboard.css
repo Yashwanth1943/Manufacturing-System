@@ -1,0 +1,73 @@
+.production-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+}
+
+.machine-status-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.auto-batch-field {
+  display: grid;
+  gap: 8px;
+}
+
+.auto-batch-field span {
+  color: #445766;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.auto-batch-field strong {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px dashed #b8c8d2;
+  border-radius: 8px;
+  background: #f8fafb;
+  color: #176b5b;
+  font-size: 14px;
+}
+
+.machine-status-card {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid rgba(128, 145, 162, 0.18);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 38px rgba(28, 43, 57, 0.08);
+}
+
+.machine-status-card h3 {
+  margin: 0 0 10px;
+  color: #17232f;
+}
+
+.machine-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.machine-stats span {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f6f8fa;
+  color: #6a7885;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.machine-stats strong {
+  color: #17232f;
+  font-size: 20px;
+}
+
+.production-metrics,
+.production-history {
+  margin-top: 22px;
+}

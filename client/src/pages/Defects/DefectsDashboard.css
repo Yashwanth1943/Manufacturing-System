@@ -1,0 +1,43 @@
+.defects-grid {
+  align-items: start;
+}
+
+.defects-metrics {
+  grid-template-columns: 1fr;
+}
+
+.heatmap-panel {
+  min-height: 100%;
+}
+
+.defect-heatmap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  min-height: 260px;
+}
+
+.defect-heatmap span {
+  border-radius: 8px;
+  background: #edf2f5;
+}
+
+.defect-heatmap .heat-1 {
+  background: rgba(23, 107, 91, 0.18);
+}
+
+.defect-heatmap .heat-2 {
+  background: rgba(196, 129, 34, 0.28);
+}
+
+.defect-heatmap .heat-3 {
+  background: rgba(196, 129, 34, 0.58);
+}
+
+.defect-heatmap .heat-4 {
+  background: rgba(182, 64, 49, 0.72);
+}
+
+.analytics-panel {
+  margin-top: 22px;
+}

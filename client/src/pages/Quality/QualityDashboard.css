@@ -1,0 +1,50 @@
+.quality-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.quality-grid {
+  align-items: stretch;
+}
+
+.quality-ring-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.quality-ring {
+  flex: 1;
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle, #ffffff 0 42%, transparent 43%),
+    conic-gradient(#176b5b 0 93%, #dfe8ee 93% 100%);
+}
+
+.quality-ring strong {
+  color: #17232f;
+  font-size: 46px;
+}
+
+.quality-ring span {
+  color: #687887;
+  font-weight: 900;
+}
+
+.quality-history {
+  margin-top: 22px;
+}
+
+@media (max-width: 980px) {
+  .quality-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .quality-stats {
+    grid-template-columns: 1fr;
+  }
+}
