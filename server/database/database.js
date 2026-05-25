@@ -48,13 +48,21 @@ const seedUsers = async () => {
 
   for (const [name, email, password, role] of users) {
     const existing = await get('SELECT id FROM users WHERE email = ?', [email]);
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     if (!existing) {
-      const hashedPassword = await bcrypt.hash(password, 10);
       await run('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)', [
         name,
         email,
         hashedPassword,
         role,
+      ]);
+    } else {
+      await run('UPDATE users SET name = ?, password = ?, role = ? WHERE email = ?', [
+        name,
+        hashedPassword,
+        role,
+        email,
       ]);
     }
   }
