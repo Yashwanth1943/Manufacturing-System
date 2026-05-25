@@ -199,8 +199,13 @@ Tables:
 - Back up `database/manufacturing.db`.
 - Set `CLIENT_URL` to the deployed frontend origin.
 - Do not commit `.env` files.
+- On Render, add these under **Environment**:
+  - `NODE_ENV=production`
+  - `JWT_SECRET=<long-random-secret>`
+  - `CLIENT_URL=<your deployed frontend URL>`
+  - `PORT=3000` if you want to override Render's injected port. Otherwise leave `PORT` unset.
 - For Linux/macOS production startup, use:
 
 ```bash
-NODE_ENV=production node index.js
+NODE_ENV=production node server.js
 ```
